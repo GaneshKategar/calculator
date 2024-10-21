@@ -15,6 +15,7 @@ def calc():
 
     global num
     global num2
+    global sym
     
     try:
         num = int(num)
@@ -24,28 +25,34 @@ def calc():
         res.configure(text='Enter Values')
 
     if sym == '+':
-        print(num+num2)
+        print("Result: ",num+num2)
         result=num+num2
         res.configure(text=result)
         
     elif sym == '-':
-        print(num - num2)
+        print("Result: ",num - num2)
         result=num-num2
         res.configure(text=result)
 
     elif sym == '*':
-        print(num * num2)
+        print("Result: ",num * num2)
         result=num*num2
         res.configure(text=result)
 
     elif sym == "/":
-        print(num / num2)
+        print("Result: ",num / num2)
         result=num/num2
         res.configure(text=result)
         
     else:
         print("Enter A valid Symbol")
         #    print(num,"\n",num2)
+
+
+    num=''
+    num2=''
+    sym=''
+        
 
     
 
@@ -63,8 +70,9 @@ def no0():
         print(num)
         txt.configure(text=num)
     else:
-        num2 = num2*10
-        print(num2)
+        # num2 = num2*10
+        num2 += '0'
+        print("num 2: ",num2)
         txt2.configure(text=num2)
 
 
@@ -78,13 +86,13 @@ def no1():
     
     if sym=='':
         num += '1'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
         
     else:
         num2 += '1'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -99,12 +107,12 @@ def no2():
 
     if sym=='':
         num += '2'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '2'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -118,12 +126,12 @@ def no3():
 
     if sym=='':
         num += '3'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '3'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -137,12 +145,12 @@ def no4():
 
     if sym=='':
         num += '4'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '4'
-        print(num2)
+        print("num 1: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -156,12 +164,12 @@ def no5():
     
     if sym=='':
         num += '5'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '5'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -175,12 +183,12 @@ def no6():
 
     if sym=='':
         num += '6'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '6'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
     
@@ -195,12 +203,12 @@ def no7():
     
     if sym=='':
         num += '7'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '7'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -214,12 +222,12 @@ def no8():
     
     if sym=='':
         num += '8'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '8'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -233,12 +241,12 @@ def no9():
     
     if sym=='':
         num += '9'
-        print(num)
+        print("num 1: ",num)
         txt.configure(text=num)
         return num
     else:
         num2 += '9'
-        print(num2)
+        print("num 2: ",num2)
         txt2.configure(text=num2)
         return num2
 
@@ -246,22 +254,26 @@ def no9():
 def plus():
     global sym
     sym='+'
+    print("Symbol :",sym)
     symtxt.configure(text='+')
 
 def sub():
     global sym
     sym = '-'
+    print("Symbol :",sym)
     symtxt.configure(text='-')
 
 
 def mul():
     global sym
     sym = '*'
+    print("Symbol :",sym)
     symtxt.configure(text='*')
 
 def div():
     global sym
     sym = '/'
+    print("Symbol :",sym)
     symtxt.configure(text='/')
     
 def clr():
